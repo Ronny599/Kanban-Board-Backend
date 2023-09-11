@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const uRI= "";
+const uRI= "/";
 // Ronit@123
 const connectToDB =() =>{
   mongoose.connect(uRI,()=>{
