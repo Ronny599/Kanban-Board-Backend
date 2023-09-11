@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const URL= "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/?retryWrites=true&w=majority";
+const uRI= "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/?retryWrites=true&w=majority";
 
 const connectToDB =() =>{
-  mongoose.connect(URL,()=>{
+  mongoose.connect(uRI,()=>{
     console.log("Connected To Database Successfully");
   })
 }
