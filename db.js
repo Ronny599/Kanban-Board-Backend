@@ -1,38 +1,39 @@
 const mongoose = require('mongoose');
 
+const uri = "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/Kanban-Board?retryWrites=true&w=majority";
 // const uRI= "/";
 // // Ronit@123
-// const connectToDB =() =>{
-//   mongoose.connect(uRI,()=>{
-//     console.log("Connected To Database Successfully");
-//   })
-// }
-
-
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/?retryWrites=true&w=majority";
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
-
-async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
+const connectToDB =() =>{
+  mongoose.connect(uRI,()=>{
+    console.log("Connected To Database Successfully");
+  })
 }
-run().catch(console.dir);
 
-module.exports= run;
+
+
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+
+// // Create a MongoClient with a MongoClientOptions object to set the Stable API version
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   }
+// });
+
+// async function run() {
+//   try {
+//     // Connect the client to the server	(optional starting in v4.7)
+//     await client.connect();
+//     // Send a ping to confirm a successful connection
+//     await client.db("admin").command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     // Ensures that the client will close when you finish/error
+//     await client.close();
+//   }
+// }
+// run().catch(console.dir);
+
+module.exports= connectToDB;
