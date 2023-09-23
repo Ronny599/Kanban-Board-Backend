@@ -4,7 +4,7 @@ const uri = "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/K
 // const uRI= "/";
 // // Ronit@123
 const connectToDB =() =>{
-  mongoose.connect(uRI,()=>{
+  mongoose.connect(uri,()=>{
     console.log("Connected To Database Successfully");
   })
 }
