@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
     a:"Gojo Satoru",
     pos: "The Honored One"
   }
-  res.json(obj);
+  res.json(obj)
 });
 
 module.exports = router

@@ -7,6 +7,7 @@ const port = 3010;
 const path = require('path');
 
 // API from routes
+app.use('/api/auth', require('./routes/auth'));
 app.use(express.static('static'));
 
 app.get('/', (req, res) => {
