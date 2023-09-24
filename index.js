@@ -6,6 +6,9 @@ const app = express();
 const port = 3010;
 const path = require('path');
 
+// Use of Middleware
+app.use(express.json); 
+
 // API from routes
 app.use('/api/auth', require('./routes/auth'));
 app.use(express.static('static'));
