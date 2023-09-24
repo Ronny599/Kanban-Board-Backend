@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   // }
   // res.json(obj)
   console.log("Hello Mister");
-  res.send("Hello");
+  res.send("Hello Ronit!");
 });
 
 module.exports = router
