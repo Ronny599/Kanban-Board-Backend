@@ -1,3 +1,4 @@
+const User= require('./models/User');
 const connectToDB= require('./db');
 
 connectToDB();
@@ -5,7 +6,7 @@ const express = require('express');
 const app = express();
 const port = 3010;
 const path = require('path');
-const User= require('./models/User');
+
 
 // Use of Middleware
 // app.use(express.json); 
