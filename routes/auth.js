@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   //   pos: "The Honored One"
   // }
   // res.json(obj)
-  console.log(req.body);
+  console.log("Hello Mister");
   res.send("Hello");
 });
 
