@@ -1,7 +1,7 @@
-const User= require('./models/User');
+// const User= require('./models/User');
 const connectToDB= require('./db');
 
-connectToDB();
+// connectToDB();
 const express = require('express');
 const app = express();
 const port = 3010;
@@ -12,7 +12,7 @@ const path = require('path');
 // app.use(express.json); 
 
 // API from routes
-app.use('/api/auth', require('./routes/auth'));
+// app.use('/api/auth', require('./routes/auth'));
 app.use(express.static('static'));
 
 app.get('/', (req, res) => {
