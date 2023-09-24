@@ -1,6 +1,6 @@
 const connectToDB= require('./db');
 
-// connectToDB();
+connectToDB();
 const express = require('express');
 const app = express();
 const port = 3010;
