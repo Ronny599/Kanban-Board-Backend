@@ -6,9 +6,7 @@ const mongoose = require('mongoose');
 const connectToDB =() =>{
   mongoose.connect("mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/?retryWrites=true&w=majority",{
     useNewUrlParser : true,
-    useUnifiedTopology : true,
-    useCreateIndex: true,
-    useFindAndModify: false
+    useUnifiedTopology : true
   })
   .then(()=>{
     console.log("Connected To Database Successfully");
