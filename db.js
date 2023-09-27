@@ -4,7 +4,7 @@ const url = "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/?
 
 // Ronit@123
 const connectToDB =() =>{
-  mongoose.connect(process.env.url,{
+  mongoose.connect("mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/?retryWrites=true&w=majority",{
     useNewUrlParser : true,
     useUnifiedTopology : true,
     useCreateIndex: true,
