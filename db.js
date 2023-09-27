@@ -1,11 +1,20 @@
 const mongoose = require('mongoose');
 
-const uri = "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/Kanban-Board?retryWrites=true&w=majority";
+const url = "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/?retryWrites=true&w=majority";
 // const uRI= "/";
 // // Ronit@123
 const connectToDB =() =>{
-  mongoose.connect(uri,()=>{
+  mongoose.connect(process.env.url,{
+    useNewUrlParser : true,
+    useUnifiedTopology : true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  })
+  .then(()=>{
     console.log("Connected To Database Successfully");
+    })
+  .catch((err)=>{  
+    console.log("Connection Lost!");
   })
 }
 
