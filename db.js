@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const url = "mongodb+srv://Ronny599:Ronit@123@kanban-board.kbuvxz2.mongodb.net/?retryWrites=true&w=majority";
-// const uRI= "/";
-// // Ronit@123
+
+// Ronit@123
 const connectToDB =() =>{
   mongoose.connect(process.env.url,{
     useNewUrlParser : true,
@@ -14,7 +14,7 @@ const connectToDB =() =>{
     console.log("Connected To Database Successfully");
     })
   .catch((err)=>{  
-    console.log("Connection Lost!");
+    console.log("Connection Lost!"+err);
   })
 }
 
