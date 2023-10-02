@@ -12,7 +12,7 @@ const connectToDB =() =>{
     console.log("Connected To Database Successfully");
     })
   .catch((err)=>{  
-    console.log("Connection Lost!"+err);
+    console.log("Connection Lost! "+err);
   })
 }
 
